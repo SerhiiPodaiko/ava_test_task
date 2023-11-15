@@ -12,7 +12,7 @@
 
 ### Website Demo:
 
-- UI - https://6554eb2a5edda12dce886387--radiant-cactus-f6f475.netlify.app/
+- UI - https://aquamarine-hotteok-d0c661.netlify.app/
 
 [//]: # (![Responsive Desktop website]&#40;./public/images/desktop-full.png&#41;)
 
