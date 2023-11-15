@@ -21,7 +21,7 @@ const SingleProduct = ({ product }: { product: IProduct }) => {
   return (
     <section className='py-10 gap-5 flex flex-col'>
       <div className='flex flex-col lg:flex-row gap-5 '>
-        {/*<Slider product={product} />*/}
+        <Slider product={product} />
         <div className='flex flex-col flex-1'>
           <h3 className='text-[34px] text-[#13101E] leading-[44px] font-bold'>{product.title}</h3>
           <p

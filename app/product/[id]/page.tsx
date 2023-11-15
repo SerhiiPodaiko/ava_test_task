@@ -15,10 +15,10 @@ export async function generateMetadata({ searchParams: { id } }: ProductMetadata
   }
 }
 
-const ProductPage = async ({ searchParams: { id } }: { searchParams: { id: string } }) => {
-  const product = await fetchGetOneProduct(Number(id))
+const ProductPage = async ({ searchParams: { id } }: { searchParams: { id: number } }) => {
+  const product = await fetchGetOneProduct(id)
 
-  if (!id)
+  if (!product)
     return (
       <AlertUI title='Message' className='bg-red-400 text-white'>
         There is no information about this product!
