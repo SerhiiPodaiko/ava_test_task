@@ -21,7 +21,7 @@ const CartList = ({ item }: { item: IProductWithQuantity }) => {
               query: { category: item.category, id: item.id }
             }}
           >
-            <Image src={item.thumbnail} width={75} height={80} className='rounded-[8px]' alt={item.title} />
+            <Image src={item.thumbnail} width={75} height={80} className='rounded-[8px]' alt={`View details of ${item.title}`} />
           </Link>
         ) : (
           <SkeletonUI className='' />
