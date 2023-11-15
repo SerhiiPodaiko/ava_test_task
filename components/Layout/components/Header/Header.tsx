@@ -12,7 +12,7 @@ import Favorites from '@components/Home/Favorites'
 import LogoSvg from '@public/icons/logo.svg'
 import FavoritesSvg from '@public/icons/favorites.svg'
 
-const Header = () => {
+const   Header = () => {
   const { menuIconView, modalFavorites, cartIconView, userIconView, setModalFavorites, favoritesStore, menuStatus } =
     useHeader()
   const { isTablet } = useMediaQueries(767, 1200)
