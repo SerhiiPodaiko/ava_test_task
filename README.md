@@ -12,7 +12,7 @@
 
 ### Website Demo:
 
-- UI - https://ava-test-task.vercel.app/
+- UI - https://6554eb2a5edda12dce886387--radiant-cactus-f6f475.netlify.app/
 
 [//]: # (![Responsive Desktop website]&#40;./public/images/desktop-full.png&#41;)
 
