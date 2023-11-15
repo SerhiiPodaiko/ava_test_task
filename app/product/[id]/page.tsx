@@ -2,13 +2,10 @@ import AlertUI from '@ui/Alert/Alert'
 import { fetchGetOneProduct } from '@lib/products/fetchProducts'
 import SingleProduct from '@components/SingleProduct/SingleProduct'
 
-type ProductMetadata = { searchParams: { id: number } }
-
-
-export async function generateMetadata({ searchParams: { id } }: ProductMetadata ) {
+export async function generateMetadata() {
   return {
-    title: `Product ${id} `,
-    description: 'One Product',
+    title: 'Product Details',
+    description: 'One Product. Product Details',
     icons: {
       icon: '/favicons/product.png'
     }
