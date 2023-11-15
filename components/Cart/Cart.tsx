@@ -11,8 +11,8 @@ const Cart = () => {
     <section>
       <h1 className='text-[#1B4B66] text-[34px] leading-[44px] font-bold'>My Cart</h1>
       {cartStore.cartItems.length ? (
-        <div className='flex'>
-          <div className='w-[70%]'>
+        <div className='flex flex-col md:flex-row sm:gap-5'>
+          <div className='md:w-[50%] lg:w-[70%]'>
             <header className='grid grid-cols-2 leading-[20px] text-[#626262] font-medium'>
               <h3>Product Name</h3>
               <div className='grid grid-cols-3'>

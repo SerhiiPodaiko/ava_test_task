@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { SubmitHandler } from 'react-hook-form'
 
@@ -9,15 +10,17 @@ export const useAuth = () => {
   const router = useRouter()
   const authStore = useAuthStore()
 
-  const onLoginSubmit: SubmitHandler<IFormLoginInput> = data => {
-    authStore.setLogin(data)
-    router.push(PAGE_SLUGS.home)
-  }
+  const onLoginSubmit: SubmitHandler<IFormLoginInput> = data => authStore.setLogin(data)
 
-  const onRegisterSubmit: SubmitHandler<IFormRegisterInput> = data => {
-    authStore.setRegister(data)
-    router.push(PAGE_SLUGS.home)
-  }
+
+  const onRegisterSubmit: SubmitHandler<IFormRegisterInput> = data => authStore.setRegister(data)
+
+  useEffect(() => {
+    if (authStore.isLoggedIn) {
+      router.push(PAGE_SLUGS.home)
+    }
+  }, [authStore.isLoggedIn])
+
 
   return {
     onLoginSubmit,

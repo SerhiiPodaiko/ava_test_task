@@ -7,7 +7,6 @@ import './Slider.css'
 import { IProduct } from '@lib/products/models'
 import SkeletonUI from '@ui/Skeleton/Skeleton'
 import ArrowSlideSvg from '@public/icons/arrows/slide-arrow-left.svg'
-import SkeletonUI from '@ui/Skeleton/Skeleton';
 
 const Slider = ({ product }: { product: IProduct }) => {
   const sliderRef = useRef<any>(null)

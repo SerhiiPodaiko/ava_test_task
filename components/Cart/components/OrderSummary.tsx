@@ -28,7 +28,7 @@ const OrderSummary = () => {
   }
 
   return (
-    <div className='w-[30%]'>
+    <div className='md:w-[50%] lg:w-[30%]'>
       <h4 className='text-[#13101E] text-[20px] leading-[26px] font-bold'>Order Summary</h4>
       <div className='mt-5 flex flex-col gap-5'>
         <div className='flex items-center justify-between'>

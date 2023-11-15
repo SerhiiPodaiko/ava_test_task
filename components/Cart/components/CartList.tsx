@@ -42,7 +42,7 @@ const CartList = ({ item }: { item: IProductWithQuantity }) => {
           <button
             onClick={() => favoritesStore.toggleProductInFavorites(item)}
             className={cn(
-              'py-[8px] px-[10px] bg-transparent text-[14px] leading-[24px] underline font-bold',
+              'py-[8px] px-[10px] lg:px-[50px] bg-transparent text-[14px] leading-[24px] underline font-bold',
               favoritesStore.isProductInFavorites(item) ? 'text-green-500' : 'text-[#1B4B66]'
             )}
           >
@@ -50,7 +50,7 @@ const CartList = ({ item }: { item: IProductWithQuantity }) => {
           </button>
           <button
             onClick={() => cartStore.removeFromCart(item.id)}
-            className='py-[8px] px-[50px] bg-transparent text-[14px] text-[#B00020] leading-[24px] underline font-bold'
+            className='py-[8px] px-[10px] lg:px-[50px] bg-transparent text-[14px] text-[#B00020] leading-[24px] underline font-bold'
           >
             Remove
           </button>
