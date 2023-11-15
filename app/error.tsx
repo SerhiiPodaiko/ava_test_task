@@ -1,7 +1,13 @@
 'use client'
+import { useEffect } from 'react'
 import ErrorSvg from '@public/icons/404/error.svg'
 
 export default function Error({ error, reset }: { error: Error; reset: () => void }) {
+
+    useEffect(() => {
+        console.error('Error client', error)
+    }, [error])
+
   return (
     <section className='p-5 border border-red-600 bg-red-400 text-white rounded'>
       <div className='flex items-center justify-between'>

@@ -2,23 +2,22 @@ import AlertUI from '@ui/Alert/Alert'
 import { fetchGetOneProduct } from '@lib/products/fetchProducts'
 import SingleProduct from '@components/SingleProduct/SingleProduct'
 
-type ProductMetadata = { searchParams: { id: number } }
-
-
-export async function generateMetadata({ searchParams: { id } }: ProductMetadata ) {
+export async function generateMetadata() {
   return {
-    title: `Product ${id} `,
-    description: 'One Product',
+    title: 'Product Details',
+    description: 'One Product. Product Details',
     icons: {
       icon: '/favicons/product.png'
     }
   }
 }
 
-const ProductPage = async ({ searchParams: { id } }: { searchParams: { id: string } }) => {
-  const product = await fetchGetOneProduct(Number(id))
+const ProductPage = async ({ searchParams: { id } }: { searchParams: { id: number } }) => {
+  const product = await fetchGetOneProduct(id)
 
-  if (!id)
+  console.log('ProductPage', product)
+
+  if (!product)
     return (
       <AlertUI title='Message' className='bg-red-400 text-white'>
         There is no information about this product!
