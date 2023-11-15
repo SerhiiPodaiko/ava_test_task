@@ -12,7 +12,7 @@ export const fetchGetAllProducts = async (): Promise<IProductsResponse> => {
   }
 }
 
-export const fetchGetOneProduct = async (id: number): Promise<IProduct> => {
+export const fetchGetOneProduct = async (id: number): Promise<Omit<IProduct, 'quantity'>> => {
   try {
     const response = await API.get(`/products/${id}`)
     console.log('fetchGetOneProduct', response.data)

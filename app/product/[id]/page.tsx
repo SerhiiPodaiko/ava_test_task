@@ -15,6 +15,8 @@ export async function generateMetadata() {
 const ProductPage = async ({ searchParams: { id } }: { searchParams: { id: number } }) => {
   const product = await fetchGetOneProduct(id)
 
+  console.log('ProductPage', product)
+
   if (!product)
     return (
       <AlertUI title='Message' className='bg-red-400 text-white'>
