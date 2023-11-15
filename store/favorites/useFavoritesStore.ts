@@ -10,7 +10,7 @@ interface UseFavoritesStore {
   removeAllProductsFromFavorites: () => void
 }
 
-const storedFavorites = localStorage.getItem('favorites') || ''
+const storedFavorites = typeof window !== 'undefined' && localStorage.getItem('favorites') || ''
 const initialFavoritesList = storedFavorites ? JSON.parse(storedFavorites) : []
 
 export const useFavoritesStore = create<UseFavoritesStore>((set, get) => ({

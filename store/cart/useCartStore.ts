@@ -19,7 +19,7 @@ interface ICartStore {
 }
 
 export const useCartStore = create<ICartStore>((set, get) => {
-  const storedCart = localStorage?.getItem('cart')
+  const storedCart = typeof window !== 'undefined' && localStorage?.getItem('cart')
   const initialCartItems: IProductWithQuantity[] = storedCart ? JSON.parse(storedCart) : []
 
   return {
